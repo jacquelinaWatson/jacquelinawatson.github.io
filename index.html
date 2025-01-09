@@ -1,13 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Jackie Watson Portfolio</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="styles.css">
 
     </head>
+
     <body>
+        
+        <header>  
+        <h1>Jackie Watson</h1>
+        <h2 > Games Developer and Programmer</h2>
+        <nav>
+            <a href="#aboutme"> About Me </a>
+            <a href="#projects"> Projects </a>
+            <a href="#cv"> CV </a>
+            <a href="#contact"> Contact </a>
+        </nav>
+        </header>
 
-        <h1> Hello World</h1>
-        <p> I'm hosted with Github Pages</p>
+        <!--Google Translate Element-->
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+                function googleTranslateElementInit() {
+                new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL}, 'google_translate_element');
+                }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
-        <p> portfolio from the desktop</p>
+        <section id = "aboutme">
+            <h3> About Me </h3>
+            <p>Hello and welcome to my portfolio! I’m a dedicated games developer, programmer, and 3D modeller with a BSc in Computer Games Development. I’m passionate about crafting engaging and immersive interactive experiences. Originally from England, I’m now based in San Marino. 
+                I did code this portfolio myself, I’m excited to share my work with you so feel free to explore!
+            </p>
+        </section>
+
+        <section id = "projects">
+                <h2> Projects </h2>
+                <div class= "projects">
+                    <div class= "project">
+                        <h3> Runeweaver </h3>
+                        <p> Art, Programmer </p>
+                        <div class = "itchio-link">
+                            <iframe frameborder="0" src="https://itch.io/embed/2909986" width="552" height="167">
+                                <a href="https://outandabout.itch.io/runeweaver">Runeweaver by OutandAbout, LazyArmGames</a>
+                            </iframe>
+                        </div>
+                        <p> Created for the GMTK 2024 Games Jam with the theme 'Built to Scale'<br>
+                        <b>Play as a wizard using runes to manipulate your environment to complete a series of dungeon based puzzles</b><br>
+                        Made with Unity</p>
+                    </div>
+                    <br>
+                    <div class= "project">
+                        <h3> Kawaii Asteroid </h3>
+                        <p> Art, Programmer </p>
+                        <div class = "itchio-link">
+                            <iframe frameborder="0" src="https://itch.io/embed/2825908?bg_color=ffffff&amp;fg_color=9616d1&amp;link_color=241d1d&amp;border_color=32001d" width="552" height="167">
+                            <a href="https://outandabout.itch.io/kawaii-asteroid">Kawaii Asteroid by OutandAbout</a></iframe>
+                        </div>
+                        <div class = "project-image">
+                            <img src= 'Media/KawaiiAsteroid.png' width='400', height='200'>
+                        </div>
+                        <p><b> An arcade space shooter game about an asteroid wanting to make friends</b></p>
+                    </div>
+                    <div class= "project">
+                        <h3> 3D model repair </h3>
+                        <p>Breathing new life into broken 3D models by repairing their geometry to ensure they are fully manifold. 
+                        This meticulous process unlocks their potential for seamless integration into video games and flawless 3D printing</p>
+                        <div class = "project-image">
+                            <figure>
+                                <img src= 'Media/zamorak01.png' width='800', height='400'>
+                                <figcaption><i> A model before any repair, high memory used and not suitable to print </i></figcaption>
+                            </figure>
+                        </div>
+                        <br>
+                        <div class = "project-image">
+                            <figure>
+                                <img src= 'Media/zamorak02.png' width='800', height='400'>
+                                <figcaption><i>The same model is now completely manifold, efficient and ready to be printed </i></figcaption>
+                            <figure>
+                        </div>
+                        <br>
+                        <div class = "project-image">
+                            <figure>
+                                <img src= 'Media/zamorak03.png' width='800', height='400'>
+                                <figcaption><i> A render of the model with a printing material example </i></figcaption>
+                            </figure>
+                        </div>
+                        <br>
+                    </div>
+                    <div class= "project">
+                        <h3> Gallery </h3>
+                        <p> A gallery of miscellaneous work</p>
+                        <div class="gallery">
+                            <figure>
+                                <img src="Media/FemaleFaceModel.png" alt="Model of a Female Head" class="thumbnail" onclick="openModal('Media/FemaleFaceModel.png')">
+                                <figcaption>Sculpted model of a female face</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Media/Helwyr_Render.png" alt="Render of a repaired model" class="thumbnail" onclick="openModal('Media/Helwyr_Render.png')">
+                                <figcaption>Render of a repaired model</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Media/GamesSocietyBanner.jpg" alt="Games Society banner" class="thumbnail" onclick="openModal('Media/GamesSocietyBanner.jpg')">
+                            <figcaption>Games society banner</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Code/ContextDiagram.PNG" alt="Context Diagram" class="thumbnail" onclick="openModal('Code/ContextDiagram.PNG')">
+                            <figcaption>Context Diagram</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Code/localplayer_code.PNG" alt="local player code" class="thumbnail" onclick="openModal('Code/localplayer_code.PNG')">
+                            <figcaption>Local player code example</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Media/mayantiles.png" alt="board game tiles" class="thumbnail" onclick="openModal('Media/mayantiles.png')">
+                            <figcaption>Tiles for a board game</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Code/UML.PNG" alt="UML" class="thumbnail" onclick="openModal('Code/UML.PNG')">
+                            <figcaption>UML</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Code/moveplayer_code.PNG" alt="move player" class="thumbnail" onclick="openModal('Code/moveplayer_code.PNG')">
+                            <figcaption>Code example for moving player</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Code/NetworkManager.PNG" alt="Network Manager" class="thumbnail" onclick="openModal('Code/NetworkManager.PNG')">
+                            <figcaption>Network Manager example in Unity</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Code/setscore_code.PNG" alt="Set score" class="thumbnail" onclick="openModal('Code/setscore_code.PNG')">
+                            <figcaption>Code example for setting score</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="Media/allgods.png" alt="all gods" class="thumbnail" onclick="openModal('Media/allgods.png')">
+                            <figcaption>A collection of repaired models</figcaption>
+                            </figure>
+                        </div>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <img class="modal-content" id="modalImage">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out if you'd like to collaborate or have any questions.</p>
+            <div class = "contactlinks">
+                <p>Email: <a href="mailto:jacquelina_watson@hotmail.com"> Jackie's Email</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/jacquelinawatson/">Jackie's Profile</a></p>
+            </div>
+        </section>
+        <footer>
+            <p>© 2025 Jackie Watson. All rights reserved.</p>
+        </footer>
+
+        <!-- Load external JavaScript -->
+        <script src="scripts.js"></script>
+        
     </body>
+
 </html>
