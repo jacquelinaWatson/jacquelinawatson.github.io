@@ -1,0 +1,212 @@
+/*Body*/
+body {
+    font-family: Arial, sans-serif; /*Specifies font for text, sans-serif is backup*/
+    margin: 0;                      /*Controls outer spacing around elements, 0 removes default*/
+    padding: 0;                     /*Controls inner spacing around elements, 0 removes default*/
+    background-color: #1e1e1e;    /*Sets background colour*/
+    color: #f0f0f0;               /*Sets text colour*/
+}
+
+
+/*Headings*/
+h1 {
+    text-align: center;             /*Aligns text horizontally*/
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;            /*Adjusts the thickness of the font*/
+}
+
+h2 {text-align: center;}
+
+header{
+    background-color: #333;
+    padding: 1em 0;             /*Adds inner space, 1em 0 means 1 unit padding vertically and 0 horizontally*/
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+
+/*Navigation Menu*/
+nav {margin-top: 10px;}
+
+nav a {
+    
+    color: #9752ff;
+    text-decoration: none;  /*Controls text decoration, none removes underlines or other decorations*/
+    margin: 0 20px;         /*Spacing between nav links, 0, 20px adds horizontal spacing*/
+    font-weight: bold;      /*Makes text bold*/
+}
+
+nav a:hover {color: #ff9800;}   /*Changes link colour on hover*/
+
+/*Sections*/
+section {
+    padding: 2em;           /*Inner padding, 2em adds even space around section*/
+    max-width: 1200px;      /*Limits the width of the section, keeps the section from stretching too wide*/
+    margin: auto;           /*Centers the section horizontally*/
+}
+
+/*Project Section*/
+.projects {
+    display: flex;      /*Applies a flexbox layout for children elements*/
+    flex-wrap: wrap;    /*Allows child elements to wrap onto new lines if needed*/
+    gap: 20px;          /*Specifies gap between flex items*/
+
+}
+
+.project {
+    background-color: #444;
+    padding: 1em;
+    border-radius: 8px;         /*Rounds the corners of elements*/
+    /*width:fit-content;*/
+    width: max-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);   /*Adds a shadows around the element*/
+    
+}
+
+.project h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.project img{
+    align-items: center;    /*Aligns items in the center along the cross axis in a flexbox container*/
+}
+
+div {
+    margin-left: auto;      /*Adds space to the left*/
+    margin-right: auto;
+}
+
+div p {
+    text-align: center;
+}
+
+div img {
+    margin-left: 10%;
+}
+
+
+
+
+/*Footer*/
+footer {    
+    text-align: center;         /*Centers text horizontally*/
+    padding: 1em 0;             /*Adds inner space around footer content*/
+    background-color: #333;
+    margin-top: 20px;           /*Adds space above the footer*/
+}
+
+footer a:link {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+/*Classes for specific elements*/
+/*Defines a flex container and centers content horizontally and vertically*/
+.itchio-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+/*Centers project images within their container*/
+.project-image {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+}
+
+
+.project-image figure {
+    /*margin: auto;
+    position: relative;*/
+    text-align: center;
+}
+
+#contact p{
+    text-align: left;
+}
+
+.contactlinks a:link {
+    color: #ff9800;
+    text-decoration: none;
+}
+.contactlinks a:hover{
+    color: #9752ff;
+    text-decoration: none;
+}
+
+/**Gallery**/
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.gallery figure {
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #f0f0f0;
+}
+
+
+.modal {
+    display: none;  
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Darken background */
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modal.show {
+    opacity: 1;
+    display: flex;  /* Make modal visible */
+}
+
+.modal-content {
+    max-width: 90%;  /* Adjust to the width you want for the image */
+    max-height: 90%; /* Adjust to the height you want */
+    object-fit: contain;  /* Maintain image aspect ratio */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.7);  /* Subtle shadow around the image */
+}
+
+.close {
+    position: absolute;
+    top: 20px; 
+    right: 20px; 
+    color: #ff0000;  /* Bright red for visibility */
+    font-size: 50px;  /* Larger X */
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2;  /* Ensure it's above the image */
+}
+
+.close:hover {
+    color: #ff6347;
+    transform: rotate(45deg) scale(1.2); /* Rotate and scale */
+}
