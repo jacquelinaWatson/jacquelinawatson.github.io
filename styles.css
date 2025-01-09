@@ -210,3 +210,31 @@ footer a:link {
     color: #ff6347;
     transform: rotate(45deg) scale(1.2); /* Rotate and scale */
 }
+
+
+
+/*Model repair gallery*/
+.modelrepairgallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.modelrepairgallery figure {
+    margin: 0;
+    position: relative;
+    text-align: center;
+}
+
+.modelrepairgallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.modelrepairgallery figcaption {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #f0f0f0;
+}
