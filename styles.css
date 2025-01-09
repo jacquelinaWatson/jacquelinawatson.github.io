@@ -144,7 +144,8 @@ footer a:link {
 /**Gallery**/
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /*grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));*/
+    grid-template-columns: auto;
     gap: 10px;
 }
 
