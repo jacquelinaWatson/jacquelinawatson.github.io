@@ -240,3 +240,10 @@ footer a:link {
     font-size: 14px;
     color: #f0f0f0;
 }
+
+/*CV CSS*/
+.introduction {
+    text-align: center;
+    margin:0;
+    padding:0; 
+}
