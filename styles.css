@@ -245,6 +245,5 @@ footer a:link {
 .introduction {
     text-align: center;
     padding: 2em;           /*Inner padding, 2em adds even space around section*/
-    max-width: 1200px;      /*Limits the width of the section, keeps the section from stretching too wide*/
     margin: auto;           /*Centers the section horizontally*/
 }
