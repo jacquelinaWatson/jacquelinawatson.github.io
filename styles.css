@@ -245,13 +245,23 @@ footer a:link {
 
 
 /*Model repair gallery*/
+/*
 .modelrepairgallery {
     display: grid;
     /*grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));*/
+/*
     grid-template-columns: 3;
-    /*gap: 10px;*/
+    /*gap: 10px;*//*
     gap: inital;
+}*/
+.modelrepairgallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
 }
+
 
 .modelrepairgallery figure {
     margin: 0;
@@ -259,11 +269,19 @@ footer a:link {
     text-align: center;
 }
 
-.modelrepairgallery img {
+/*.modelrepairgallery img {
     width: 100%;
     height: auto;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}*/
+.modelrepairgallery img {
+  width: 100%;
+  height: auto;
+  max-width: 600px; /* optional limit to keep images smaller */
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  display: block;
 }
 
 .modelrepairgallery figcaption {
@@ -278,4 +296,5 @@ footer a:link {
     padding: 2em;           /*Inner padding, 2em adds even space around section*/
     margin: auto;           /*Centers the section horizontally*/
 }
+
 
