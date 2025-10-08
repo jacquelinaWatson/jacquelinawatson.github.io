@@ -58,17 +58,15 @@ section {
 }
 
 .project {
-    background-color: #444;
-    padding: 1em;
-    border-radius: 8px;         /*Rounds the corners of elements*/
-    /*width:fit-content;*/
-    /*width: max-content;*/
-    width: 100%;
-    max-width: 1000%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);   /*Adds a shadows around the element*/
-    
+  background-color: #444;
+  padding: 1em;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 1000px; /* keeps layout tidy */
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
-
 .project h3 {
     margin-top: 0;
     text-align: center;
@@ -260,6 +258,9 @@ footer a:link {
   align-items: center;
   gap: 2rem;
   width: 100%;
+  max-width: 100%; /* prevents overflow */
+  box-sizing: border-box;
+  overflow: hidden; /* hides any residual overflow */
 }
 
 
@@ -277,8 +278,8 @@ footer a:link {
 }*/
 .modelrepairgallery img {
   width: 100%;
+  max-width: 600px;
   height: auto;
-  max-width: 600px; /* optional limit to keep images smaller */
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   display: block;
@@ -296,5 +297,6 @@ footer a:link {
     padding: 2em;           /*Inner padding, 2em adds even space around section*/
     margin: auto;           /*Centers the section horizontally*/
 }
+
 
 
